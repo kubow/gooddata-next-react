@@ -1,0 +1,28 @@
+{
+  "name": "next-15",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@gooddata/api-client-tiger": "^10.27.0",
+    "@gooddata/sdk-backend-tiger": "^10.27.0",
+    "@gooddata/sdk-ui": "^10.27.0",
+    "@gooddata/sdk-ui-charts": "^10.27.0",
+    "next": "15.3.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
