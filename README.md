@@ -1,4 +1,10 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+- This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+- Next step was to install GoodData dependencies
+`npm install @gooddata/api-client-tiger @gooddata/sdk-backend-tiger @gooddata/sdk-ui @gooddata/sdk-ui-charts`
+`npm install @gooddata/sdk-ui-dashboard @gooddata/sdk-model`
+
+- And integration into this application
 
 ## Getting Started
 

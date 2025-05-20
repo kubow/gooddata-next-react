@@ -1,21 +1,29 @@
+'use client';
+
 import Image from "next/image";
-// import tigerFactory, {
-//   ContextDeferredAuthProvider,
-//   redirectToTigerAuthentication,
-// } from "@gooddata/sdk-backend-tiger";
-// import { BackendProvider, WorkspaceProvider } from "@gooddata/sdk-ui";
+import tigerFactory, {
+  ContextDeferredAuthProvider,
+  redirectToTigerAuthentication,
+} from "@gooddata/sdk-backend-tiger";
+import { BackendProvider, WorkspaceProvider } from "@gooddata/sdk-ui";
+import { Dashboard } from "@gooddata/sdk-ui-dashboard";
+import { idRef } from "@gooddata/sdk-model";
+
+// import "@gooddata/sdk-ui-filters/styles/css/main.css";
+import "@gooddata/sdk-ui-charts/styles/css/main.css";
+import "@gooddata/sdk-ui-dashboard/styles/css/main.css";
 
 export default function Home() {
 
-  // const backend = tigerFactory()
-  //   .onHostname("https://jav.demo.cloud.gooddata.com")
-  //   .withAuthentication(
-  //     new ContextDeferredAuthProvider(redirectToTigerAuthentication)
-  //   );
+  const backend = tigerFactory()
+    .onHostname("https://jav.demo.cloud.gooddata.com")
+    .withAuthentication(
+      new ContextDeferredAuthProvider(redirectToTigerAuthentication)
+    );
 
   return (
-    // <BackendProvider backend={backend}>
-    //   <WorkspaceProvider workspace="ecommerce-parent">  
+    <BackendProvider backend={backend}>
+    <WorkspaceProvider workspace="364b20df6fa7462789dc91238f188148">  
         <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
           <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
             <Image
@@ -26,6 +34,7 @@ export default function Home() {
               height={38}
               priority
             />
+            <Dashboard dashboard={idRef("92e3bd45-4223-4832-aa0e-061f636e3cf7")} />;
             <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
               <li className="mb-2 tracking-[-.01em]">
                 Get started by editing{" "}
@@ -113,7 +122,7 @@ export default function Home() {
             </a>
           </footer>
         </div>
-    //   </WorkspaceProvider>
-    // </BackendProvider>  
+      </WorkspaceProvider>
+    </BackendProvider>  
   );
 }
